@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- fontawesome.com -->
+    <script src="https://kit.fontawesome.com/dd3e7e5350.js"
+        crossorigin="anonymous">
+        </script>
+    <!-- Google Font 'Arsenal SC' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Barra de Navegacion -->
+        <nav class="navbar">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+            <h4 id="Titulo">Alura Geek</h4>
+            <ul>
+                <li><a href="#LinkRedes">Redes</a></li>
+                <li><a href="#SobreMi">Sobre Mi</a></li>
+                <li><a href="#Habilidades">Habilidades</a></li>
+                <li><a href="#Hobbies">Hobbies</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="Cuerpa">
+        <div id="Agregados">
+            <h1>Mis Productos</h1>
+            <section id="tarjetas">
+            </section>
+        </div>
+        <div id="Agregar">
+            <h1>Agregar Item</h1>
+            <div id="form">
+                <input type="text" id="cardNombreNuevo" name="nombre"
+                    placeholder="Nombre">
+                <input required type="number" id="cardPrecioNuevo" name="precio"
+                    placeholder="Precio">
+                <input type="text" id="cardImagenNuevo" name="imagen"
+                    placeholder="URL imagen">
+                <div>
+                    <button class="btnAgregar">Agregar</button>
+                    <button class="btnLimpiar">Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+            <h4>Alura Geek</h4>
+        </div>
+        <p>Desarrollado por <strong class="arsenal">~SansoN~</strong></p>
+        <p>Alura LATAM - 2024</p>
+    </footer>
+</body>
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+<!-- Funcion agregar item -->
+<script src="./js/agregarItem.js"></script>
+
+</html>

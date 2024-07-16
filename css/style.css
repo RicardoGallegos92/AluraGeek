@@ -1,0 +1,183 @@
+.arsenal {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-style: oblique;
+}  
+
+:root{
+    --COLOR_PRINCIPAL_TEXTO: #000000;
+    --COLOR_SECUNDARIO_TEXTO: #FFFFFF;
+    --COLOR_PRINCIPAL_FONDO:#FFFFFF;
+    --COLOR_PRINCIPAL_FOOTER: #8C0375;
+    --COLOR_PRINCIPAL_HEADER:#03318C;
+    --COLOR_TARJETA: #5D04D9;
+}
+
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    color:var(--COLOR_PRINCIPAL_TEXTO);
+    background-color: var(--COLOR_PRINCIPAL_FONDO);
+}
+
+a {
+    text-decoration-line: none;
+    color: var(--COLOR_PRINCIPAL_TEXTO);
+}
+
+body{
+    margin: 0;
+    padding: 1vh 1vw;
+}
+
+header{
+    color: var(--COLOR_SECUNDARIO_TEXTO);
+    background-color: var(--COLOR_PRINCIPAL_HEADER);
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >i{
+        font-size: 1rem;
+        color: red;
+        padding: 5px;
+    }
+    text-shadow: -3px 2px black;
+}
+
+.navbar>ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+/* pegar arriba de la pantalla */
+    border: 4px black double;
+}
+
+.navbar>ul{
+    display: none;
+    width: 50vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul>li::marker{
+    content: "";
+}
+
+#Cuerpa{
+    display: flex;
+    flex-flow: row nowrap;
+    >*{
+        width: 50%;
+        text-align: center;
+    }
+}
+
+#Agregados{
+    margin-top: 15px;
+    border: 5px double var(--COLOR_PRINCIPAL_FOOTER);
+    display: grid;
+    overflow-y: scroll;
+    max-height: 65vh;
+    >#tarjetas{
+        display: grid;
+        grid: auto auto / 30% 30% 30%;
+        justify-content: space-evenly;
+        gap: 15px 0;
+        max-height: 50vh;
+    }
+}
+
+#Agregar>#form{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 7vw;
+    *:not(div){
+        padding: 1rem 0;
+        margin: .5rem 0;
+        border-radius: 30px;
+        text-indent: 1rem;
+        border-color: var(--COLOR_TARJETA);
+    }
+    button{
+        text-indent: 0;
+        margin: 1rem 1rem;
+        padding: 0.5rem 5rem;
+        border-radius: 10px;
+    }
+}
+
+.card{
+    color: var(--COLOR_SECUNDARIO_TEXTO);
+    background-color: var(--COLOR_TARJETA);
+    border: 2px solid var(--COLOR_PRINCIPAL_TEXTO);
+    border-radius: 10px;
+    height: 150px;
+    width: auto;
+    >.card-name{
+        margin: 0;
+    }
+}
+
+.card-img{
+    border: 2px solid var(--COLOR_PRINCIPAL_TEXTO);
+    border-radius: 5px;
+    width: 95%;
+    height: 80px;
+}
+
+.card-info{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btnAgregar{
+    color: var(--COLOR_SECUNDARIO_TEXTO);
+    background-color: var(--COLOR_TARJETA);
+}
+
+.btnLimpiar{
+    color: var(--COLOR_PRINCIPAL_TEXTO);
+    background-color: transparent;
+}
+
+footer{
+    color: var(--COLOR_SECUNDARIO_TEXTO);
+    background-color: var(--COLOR_PRINCIPAL_FOOTER);
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    text-shadow: -1px -2px black;
+    >div{
+        >i{
+            color: red;
+            padding: 5px;
+        }
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    >*{
+        font-size: 20px;
+        margin: 0;
+        padding: 5px 0;
+    }
+}
