@@ -12,6 +12,7 @@ $(document).ready(function() {
             $("#tarjetas").append(nuevoItem);
             return;
         }
+        alert("llene todos los datos solicitados");
     }
 // Dar formato tarjeta para HTML
     function crearCardNueva() {
