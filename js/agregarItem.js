@@ -7,17 +7,22 @@ $(document).ready(function() {
     }
 
     function agregarItemNuevo(nuevoItem) {
-        $("#tarjetas").append(nuevoItem);
+        if(nuevoItem)
+        {
+            $("#tarjetas").append(nuevoItem);
+            return;
+        }
     }
 // Dar formato tarjeta para HTML
     function crearCardNueva() {
         let cardNombre = $("#cardNombreNuevo").val();
         let cardPrecio = $("#cardPrecioNuevo").val();
         let cardImgURL = $("#cardImagenNuevo").val();
-        if (cardNombre || cardPrecio || cardImgURL){
+        if (cardNombre && cardPrecio && cardImgURL){
             let CARD_NUEVA =`<div class="card"><img class="card-img" src="${cardImgURL}" alt=""><h6 class="card-name">${cardNombre}</h6><div class="card-info"><i class="fa-solid fa-dollar-sign"></i><p class="precio">${cardPrecio}</p><i class="fa-regular fa-trash-can delete"></i></div></div>`;
             return CARD_NUEVA;
         }
+        return false;
     }
 // Agregar nuevo elemento
     $(btnAgregar).on("click", function() {
